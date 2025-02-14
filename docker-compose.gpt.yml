@@ -8,9 +8,6 @@ services:
       - "9000:9000"  # ✅ 호스트 9000 → 컨테이너 9000 매핑
     env_file:
       - ./src/.env  # ✅ 수정: .env 파일을 gpt 루트 폴더에서 로드하도록 변경
-    environment:
-      - AWS_REGION=ap-northeast-2
-      - OPENAI_API_KEY=${OPENAI_API_KEY}  # .env에서 불러올 수 있도록 설정
     volumes:
       - ./src:/app/src
     networks:
