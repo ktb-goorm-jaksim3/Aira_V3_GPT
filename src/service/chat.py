@@ -77,7 +77,7 @@ def process_generate_request(chat_request: ChatRequest) -> dict:
     
     start_time = time.time()
     iteration = 0
-    timeout = 90  # seconds
+    timeout = 120  # seconds
     while True:
         iteration += 1
         print(f"Polling iteration {iteration}, elapsed time: {time.time() - start_time:.2f} seconds")
