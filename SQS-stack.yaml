@@ -6,6 +6,7 @@ Resources:
       FifoQueue: true
       ContentBasedDeduplication: false  # Since you're providing a MessageDeduplicationId
       VisibilityTimeout: 60               # In seconds
+      ReceiveMessageWaitTimeSeconds: 20   # Enable long polling (20 seconds)
       MessageRetentionPeriod: 345600      # 4 days in seconds
       RedrivePolicy:
         deadLetterTargetArn: !GetAtt GPTRequestDLQ.Arn
@@ -25,6 +26,7 @@ Resources:
       FifoQueue: true
       ContentBasedDeduplication: false
       VisibilityTimeout: 60
+      ReceiveMessageWaitTimeSeconds: 20   # Enable long polling (20 seconds)
       MessageRetentionPeriod: 345600
       RedrivePolicy:
         deadLetterTargetArn: !GetAtt GPTResponseDLQ.Arn
@@ -35,4 +37,4 @@ Resources:
     Properties:
       QueueName: gpt-response-dlq.fifo
       FifoQueue: true
-      MessageRetentionPeriod: 1209600
+      MessageRetentionPeriod: 1209600     # 14 days in seconds

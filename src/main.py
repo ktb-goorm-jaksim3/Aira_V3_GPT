@@ -9,6 +9,10 @@ class GenerateRequest(BaseModel):
     max_tokens: int
     temperature: float
 
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
+
 @app.post("/generate/")
 async def generate_endpoint(request: GenerateRequest):
     try:
