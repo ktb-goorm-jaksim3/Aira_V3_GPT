@@ -1,13 +1,4 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
-
----
-
----
 name: "✨ 기능 요청 (Feature Request)"
 about: "새로운 기능을 제안하세요"
 title: "[Feature] 기능 요약"
@@ -36,8 +27,8 @@ assignees: ''
 ---
 
 ## 🚀 To-Do
-- [] Task 1
-- [] Task 2
+- [ ] Task 1
+- [ ] Task 2
 
 ---
 
