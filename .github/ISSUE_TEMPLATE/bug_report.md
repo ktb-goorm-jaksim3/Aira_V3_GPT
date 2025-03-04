@@ -1,13 +1,4 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
-
----
-
----
 name: "🐞 버그 리포트 (Bug Report)"
 about: "발생한 버그를 신고하세요"
 title: "[Bug] 버그 요약"
@@ -30,8 +21,8 @@ assignees: ''
 
 ---
 ## 🚨 To-Do
-- [] Task 1
-- [] Task 2
+- [ ] Task 1
+- [ ] Task 2
 
 ---
 
