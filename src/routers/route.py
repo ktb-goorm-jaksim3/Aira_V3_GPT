@@ -1,4 +1,5 @@
 import os
+from fastapi import APIRouter
 import json
 import boto3
 
@@ -6,6 +7,8 @@ import boto3
 sqs = boto3.client('sqs')
 # 환경 변수에서 SQS 응답 큐 URL을 가져옵니다. 필요에 따라 수정하세요.
 RESPONSE_QUEUE_URL = os.environ.get("RESPONSE_QUEUE_URL")
+
+router = APIRouter()
 
 @router.get("/result/{request_id}")
 async def get_result(request_id: str):
