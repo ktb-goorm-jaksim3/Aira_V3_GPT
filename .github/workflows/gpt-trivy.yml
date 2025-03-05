@@ -2,7 +2,7 @@ name: Docker Image Vulnerability Scan with Trivy
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ "dev_production" ]
   pull_request:
     branches: [ "main" ]
 
@@ -24,7 +24,7 @@ jobs:
           docker build -t my-image:latest .
 
       - name: Scan Docker image with Trivy
-        uses: aquasecurity/trivy-action@v0.5.0
+        uses: aquasecurity/trivy-action@master
         with:
           image-ref: my-image:latest
           format: table
