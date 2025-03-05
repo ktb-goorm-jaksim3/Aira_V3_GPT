@@ -1,3 +1,12 @@
+import os
+import json
+import boto3
+
+# boto3를 사용하여 SQS 클라이언트를 생성합니다.
+sqs = boto3.client('sqs')
+# 환경 변수에서 SQS 응답 큐 URL을 가져옵니다. 필요에 따라 수정하세요.
+RESPONSE_QUEUE_URL = os.environ.get("RESPONSE_QUEUE_URL")
+
 @router.get("/result/{request_id}")
 async def get_result(request_id: str):
     response = sqs.receive_message(
